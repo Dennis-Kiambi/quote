@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -9,7 +9,21 @@ import { Quote } from '../quote';
 export class VoteComponent implements OnInit {
   @Output() isComplete = new EventEmitter<boolean>();
 
-  numberOfLikes: number = 0;
+
+  @Input()
+  quote: Quote;
+
+  increaseLikes() {
+    this.quote.likes++
+  }
+
+  increaseDislikes() {
+    this.quote.dislikes++
+  }
+
+
+  //@Input()
+  /* numberOfLikes: number = 0;
   // newQuote = new Quote();
 
   niceButtonClick() {
@@ -18,7 +32,7 @@ export class VoteComponent implements OnInit {
 
   lameButtonClick() {
     this.numberOfLikes--;
-  }
+  } */
 
   // deleteQuote(complete: boolean) {
   //   this.isComplete.emit(complete);

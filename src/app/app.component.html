@@ -1,15 +1,18 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<h1>Great quotes: the app</h1>
-<div class="col-md-6">
-    <app-form></app-form>
-    <div>
-        <hr>
-
-        <p *ngFor='let quote of quotes'>
-            {{quote.author}} : {{quote.details}}
-        </p>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Great quotes: the app</h1>
+        </div>
     </div>
-    <app-vote></app-vote>
+    <div class="row">
+        <div class="col-md-6">
+            <app-form (addQuote)="addNewQuote($event)"></app-form>
+            <div>
+                <hr>
+                <app-quote *ngFor='let quote of quotes' [quote]="quote"></app-quote>
+            </div>
+        </div>
+    </div>
 </div>

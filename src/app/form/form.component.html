@@ -1,8 +1,11 @@
-<form (ngSubmit)='submitQuote()' #formForm='ngForm'>
-    <input class="form-control form-control-lg" type="text" placeholder="Write your quote here">
-    <input class="form-control form-control-lg" type="text" placeholder="Author's name">
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<!-- <form (ngSubmit)='submitQuote()' #formForm='ngForm' novalidate> -->
+
+{{newQuote.author}} | {{newQuote.details}}
+<input class="form-control form-control-lg" [(ngModel)]="newQuote.details" type="text"
+    placeholder="Write your quote here">
+<input class="form-control form-control-lg" [(ngModel)]="newQuote.author" type="text" placeholder="Author's name">
+<button type="button" class="btn btn-primary" (click)="submitQuote()">Submit</button>
+<!-- </form> -->
 <div class="added-quote">
     <!-- <p>{{newQuote}}</p> -->
 </div>

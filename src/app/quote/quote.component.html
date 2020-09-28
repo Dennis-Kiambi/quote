@@ -1,0 +1,16 @@
+<!-- <app-vote></app-vote> -->
+
+<div class="card">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+        <h5 class="card-title">{{quote.author}}</h5>
+        <p>{{quote.details}}</p>
+
+        <hr />
+        <p class="card-text">{{quote.likes}} likes {{quote.dislikes}} Dislikes </p>
+
+        <app-vote [quote]="quote"></app-vote>
+
+        <button type="button" class="btn btn-danger" (click)='quoteDelete(true)'>Delete quote</button>
+    </div>
+</div>
