@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { Quote } from '../quote';
+import { Quote } from '../models';
 
 @Component({
   selector: 'app-vote',
