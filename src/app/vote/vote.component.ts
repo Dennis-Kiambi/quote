@@ -9,7 +9,6 @@ import { Quote } from '../models';
 export class VoteComponent implements OnInit {
   @Output() isComplete = new EventEmitter<boolean>();
 
-
   @Input()
   quote: Quote;
 
@@ -20,28 +19,6 @@ export class VoteComponent implements OnInit {
   increaseDislikes() {
     this.quote.dislikes++
   }
-
-
-  //@Input()
-  /* numberOfLikes: number = 0;
-  // newQuote = new Quote();
-
-  niceButtonClick() {
-    this.numberOfLikes++;
-  }
-
-  lameButtonClick() {
-    this.numberOfLikes--;
-  } */
-
-  // deleteQuote(complete: boolean) {
-  //   this.isComplete.emit(complete);
-  // }
-
-  // deleteQuote(isComplete, index) {
-  //   this.quote.splice(index, 1)
-  // }
-
 
   constructor() { }
 
