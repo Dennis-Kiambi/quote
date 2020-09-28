@@ -2,15 +2,18 @@
 
 <div class="card">
     <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body">
-        <h5 class="card-title">{{quote.author}}</h5>
-        <p>{{quote.details}}</p>
+    <div class="card-body" style="background-color:transparent; margin:4px">
+        <p class="card-title">{{quote.details}}</p>
+        <small>by {{quote.author}}</small>
+        <br />
+        <small><i>{{quote.createdAt | elapsedTime}}</i></small>
 
         <hr />
         <p class="card-text">{{quote.likes}} likes {{quote.dislikes}} Dislikes </p>
 
+
         <app-vote [quote]="quote"></app-vote>
 
-        <button type="button" class="btn btn-danger" (click)='quoteDelete(true)'>Delete quote</button>
+        <button type="button" class="btn btn-danger">Delete</button>
     </div>
 </div>
