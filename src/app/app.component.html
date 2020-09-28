@@ -11,7 +11,16 @@
             <app-form (addQuote)="addNewQuote($event)"></app-form>
             <div>
                 <hr>
-                <app-quote *ngFor='let quote of quotes' [quote]="quote"></app-quote>
+                <div *ngFor='let quote of quotes'>
+                    <div *ngIf="quote == mostUpvoted" appMaxUpvoteHighlighter>
+                        <app-quote [quote]="quote"></app-quote>
+                    </div>
+                    <div *ngIf="quote != mostUpvoted">
+                        <app-quote [quote]="quote"></app-quote>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </div>

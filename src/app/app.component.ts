@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Quote } from './quote';
+import { Quote } from './models';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +11,15 @@ export class AppComponent {
   newQuote = new Quote();
 
   quotes: Quote[] = [
-    { author: 'Mugabe', details: 'Eat your veges', likes: 0, dislikes: 0 },
-    { author: 'Kibaki', details: 'Love is sharing your popcorn', likes: 0, dislikes: 0 },
-    { author: 'Barrack', details: 'I am here to kick ass and chew bubblegum.', likes: 0, dislikes: 0 }
+    //{ author: 'Mugabe', details: 'Eat your veges', likes: 0, dislikes: 0 },
   ];
+
+  get mostUpvoted() {
+    return this.quotes.reduce(function (prevQuote, currQuote) {
+      return (prevQuote.likes > currQuote.likes) ? prevQuote : currQuote;
+    }, new Quote());
+  }
+
 
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
