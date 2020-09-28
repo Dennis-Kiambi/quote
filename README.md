@@ -1,9 +1,9 @@
-# ![Portfolio](https://dennis-kiambi.github.io/quote/)
+# ![Quotes](https://dennis-kiambi.github.io/quote/)
 # Portfolio
 <table>
 <tr>
 <td>
- An application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+ This is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
 </td>
 </tr>
 </table>
