@@ -1,4 +1,4 @@
-import { Quote } from '../quote';
+import { Quote } from '../models';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -14,7 +14,9 @@ export class FormComponent implements OnInit {
   submitQuote() {
     //validate the input from html then emit quote
     //then clear form
+    this.newQuote.createdAt = new Date();
     this.addQuote.emit(this.newQuote);
+    this.newQuote = new Quote();
   }
   constructor() { }
 
