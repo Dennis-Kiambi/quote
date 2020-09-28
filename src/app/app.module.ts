@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { VoteComponent } from './vote/vote.component';
 import { QuoteComponent } from './quote/quote.component';
+import { ElapsedTimePipe } from './pipes/elapsed-time.pipe';
+import { MaxUpvoteHighlighterDirective } from './directives//max-upvote-highlighter.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     VoteComponent,
-    QuoteComponent
+    QuoteComponent,
+    ElapsedTimePipe,
+    MaxUpvoteHighlighterDirective
   ],
   imports: [
     BrowserModule,
