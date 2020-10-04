@@ -64,7 +64,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 Figma. Link to the [figma design](https://www.figma.com/file/e1VWtDhh2v1whp0IN8dpdV/Quotes-app?node-id=0%3A1)
 
 
-## [License](https://dennis-kiambi.github.io/quote/LICENSE.md)
+## [License](https://dennis-kiambi.github.io/LICENSE.md)
 
 [MIT] © [Dennis Kiambi ]https://dennis-kiambi.github.io/quote/LICENSE.md)
 
