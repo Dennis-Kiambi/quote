@@ -66,7 +66,7 @@ Figma. Link to the [figma design](https://www.figma.com/file/e1VWtDhh2v1whp0IN8d
 
 ## [License](https://dennis-kiambi.github.io/LICENSE.md)
 
-[MIT] © [Dennis Kiambi ]https://dennis-kiambi.github.io/quote/LICENSE.md)
+[MIT] © [Dennis Kiambi ]./LICENSE.md)
 
 
 # Quote
